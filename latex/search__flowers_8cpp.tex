@@ -1,0 +1,70 @@
+\doxysection{search\+\_\+flowers.\+cpp File Reference}
+\hypertarget{search__flowers_8cpp}{}\label{search__flowers_8cpp}\index{search\_flowers.cpp@{search\_flowers.cpp}}
+
+
+ЛР2 — Алгоритмы поиска данных  
+
+
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include $<$sstream$>$}\newline
+{\ttfamily \+\#include $<$chrono$>$}\newline
+{\ttfamily \+\#include $<$map$>$}\newline
+{\ttfamily \+\#include $<$cstdlib$>$}\newline
+{\ttfamily \+\#include $<$ctime$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_flower}{Flower}}
+\item 
+struct \doxymbox{\hyperlink{struct_b_s_t_node}{BSTNode}}
+\item 
+struct \doxymbox{\hyperlink{struct_r_b_node}{RBNode}}
+\item 
+class \doxymbox{\hyperlink{class_r_b_tree}{RBTree}}
+\item 
+class \doxymbox{\hyperlink{class_hash_table}{Hash\+Table}}
+\begin{DoxyCompactList}\small\item\em Хеш-\/таблица с разрешением коллизий цепочками \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{search__flowers_8cpp_ab87bacfdad76e61b9412d7124be44c1c}\label{search__flowers_8cpp_ab87bacfdad76e61b9412d7124be44c1c} 
+enum {\bfseries Color} \{ {\bfseries RED}
+, {\bfseries BLACK}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{search__flowers_8cpp_a00a8600d6df3ebcd43f9ae87120039d5}\label{search__flowers_8cpp_a00a8600d6df3ebcd43f9ae87120039d5} 
+vector$<$ \doxymbox{\hyperlink{struct_flower}{Flower}} $>$ {\bfseries generate\+Data} (int n)
+\begin{DoxyCompactList}\small\item\em Генерация данных в памяти \end{DoxyCompactList}\item 
+\Hypertarget{search__flowers_8cpp_ade94b415522b02502f4f27985a229dcf}\label{search__flowers_8cpp_ade94b415522b02502f4f27985a229dcf} 
+vector$<$ \doxymbox{\hyperlink{struct_flower}{Flower}} $>$ {\bfseries linear\+Search} (const vector$<$ \doxymbox{\hyperlink{struct_flower}{Flower}} $>$ \&arr, const string \&key)
+\begin{DoxyCompactList}\small\item\em Линейный поиск всех вхождений @complexity O(n). \end{DoxyCompactList}\item 
+\Hypertarget{search__flowers_8cpp_abdf3068855c22f05aa4035268a3fa083}\label{search__flowers_8cpp_abdf3068855c22f05aa4035268a3fa083} 
+\doxymbox{\hyperlink{struct_b_s_t_node}{BSTNode}} \texorpdfstring{$\ast$}{*} {\bfseries bst\+Insert} (\doxymbox{\hyperlink{struct_b_s_t_node}{BSTNode}} \texorpdfstring{$\ast$}{*}root, const string \&key, const \doxymbox{\hyperlink{struct_flower}{Flower}} \&val)
+\item 
+\Hypertarget{search__flowers_8cpp_a47a062ea6e78b7e0a3bf0237481b7459}\label{search__flowers_8cpp_a47a062ea6e78b7e0a3bf0237481b7459} 
+vector$<$ \doxymbox{\hyperlink{struct_flower}{Flower}} $>$ {\bfseries bst\+Search} (\doxymbox{\hyperlink{struct_b_s_t_node}{BSTNode}} \texorpdfstring{$\ast$}{*}root, const string \&key)
+\begin{DoxyCompactList}\small\item\em Поиск в BST @complexity O(log n) avg, O(n) worst. \end{DoxyCompactList}\item 
+\Hypertarget{search__flowers_8cpp_aac9673f4e9730fdfc605c7218ba85ed3}\label{search__flowers_8cpp_aac9673f4e9730fdfc605c7218ba85ed3} 
+void {\bfseries bst\+Free} (\doxymbox{\hyperlink{struct_b_s_t_node}{BSTNode}} \texorpdfstring{$\ast$}{*}root)
+\item 
+\Hypertarget{search__flowers_8cpp_a666d88e2af102ae70f17ae6d7ab74d99}\label{search__flowers_8cpp_a666d88e2af102ae70f17ae6d7ab74d99} 
+{\footnotesize template$<$typename Fn$>$ }\\long long {\bfseries measure\+Micro} (Fn fn)
+\item 
+\Hypertarget{search__flowers_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{search__flowers_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+ЛР2 — Алгоритмы поиска данных 
+
+\begin{DoxyAuthor}{Author}
+Галицын Дмитрий Дмитриевич
+\end{DoxyAuthor}
+Вариант 4:\+ Массив данных по цветам. Ключ — name. 

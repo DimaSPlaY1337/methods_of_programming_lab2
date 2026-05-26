@@ -1,0 +1,36 @@
+\doxysection{Hash\+Table Class Reference}
+\hypertarget{class_hash_table}{}\label{class_hash_table}\index{HashTable@{HashTable}}
+
+
+Хеш-\/таблица с разрешением коллизий цепочками  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_hash_table_a79882d36ab5239e90672a167427b16af}\label{class_hash_table_a79882d36ab5239e90672a167427b16af} 
+{\bfseries Hash\+Table} (int cap)
+\item 
+\Hypertarget{class_hash_table_a23d1a67fb7ba505598bdf439f47e43da}\label{class_hash_table_a23d1a67fb7ba505598bdf439f47e43da} 
+int {\bfseries hash\+Func} (const string \&key) const
+\begin{DoxyCompactList}\small\item\em Хеш-\/функция djb2. \end{DoxyCompactList}\item 
+\Hypertarget{class_hash_table_a59f53e7d5a064bfd8e0f1ac58b70602c}\label{class_hash_table_a59f53e7d5a064bfd8e0f1ac58b70602c} 
+void {\bfseries insert} (const string \&key, const \doxymbox{\hyperlink{struct_flower}{Flower}} \&val)
+\item 
+\Hypertarget{class_hash_table_a4541d44cfcd057cbf65c49efc5b9086c}\label{class_hash_table_a4541d44cfcd057cbf65c49efc5b9086c} 
+vector$<$ \doxymbox{\hyperlink{struct_flower}{Flower}} $>$ {\bfseries search} (const string \&key) const
+\begin{DoxyCompactList}\small\item\em Поиск по ключу @complexity O(1) avg, O(n) worst. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_hash_table_a3150496af802fb78d733527ca01cc856}\label{class_hash_table_a3150496af802fb78d733527ca01cc856} 
+int {\bfseries collisions} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Хеш-\/таблица с разрешением коллизий цепочками 
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{search__flowers_8cpp}{search\+\_\+flowers.\+cpp}}\end{DoxyCompactItemize}
