@@ -233,16 +233,16 @@ class HashTable {
     vector<vector<pair<string, Flower>>> table;
 public:
     int collisions = 0;
-
+    //explicit - нахуй
     explicit HashTable(int cap) : capacity(cap), table(cap) {}
 
     /**
      * @brief Хеш-функция djb2
      */
     int hashFunc(const string& key) const {
-        unsigned long h = 5381;
+        unsigned long h = 5381;//генерируем индекс для ящика
         for (unsigned char c : key) h = ((h << 5) + h) + c;
-        return (int)(h % capacity);
+        return (int)(h % capacity); //индекс ящика
     }
 
     void insert(const string& key, const Flower& val) {
@@ -283,6 +283,7 @@ int main() {
     for (int size : sizes) {
         vector<Flower> data = generateData(size);
 
+        //время поиска ключа
         long long tLinear = measureMicro([&](){ linearSearch(data, searchKey); });
 
         BSTNode* bstRoot = nullptr;
