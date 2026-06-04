@@ -233,8 +233,8 @@ class HashTable {
     vector<vector<pair<string, Flower>>> table;
 public:
     int collisions = 0;
-    //explicit - нахуй
-    explicit HashTable(int cap) : capacity(cap), table(cap) {}
+    
+    HashTable(int cap) : capacity(cap), table(cap) {}
 
     /**
      * @brief Хеш-функция djb2
