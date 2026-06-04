@@ -1,7 +1,7 @@
 
 /**
  * @file search_flowers.cpp
- * @brief ЛР2 — Алгоритмы поиска данных
+ *  ЛР2 — Алгоритмы поиска данных
  * @author Галицын Дмитрий Дмитриевич
  * @details Вариант 4: Массив данных по цветам. Ключ — name.
  */
@@ -32,7 +32,7 @@ static const char* AROMAS[]  = {"сильный","умеренный","слаб�
 static const char* REGIONS[] = {"Европа","Азия","Северная Америка","Южная Америка","Африка"};
 
 /**
- * @brief Генерация данных в памяти
+ *  Генерация данных в памяти
  */
 vector<Flower> generateData(int n) {
     vector<Flower> v;
@@ -43,12 +43,12 @@ vector<Flower> generateData(int n) {
     return v;
 }
 
-// ===========================
+
 // Линейный поиск
-// ===========================
+
 /**
- * @brief Линейный поиск всех вхождений
- * @complexity O(n)
+ * Линейный поиск всех вхождений
+ * O(n)
  */
 vector<Flower> linearSearch(const vector<Flower>& arr, const string& key) {
     vector<Flower> result;
@@ -57,9 +57,9 @@ vector<Flower> linearSearch(const vector<Flower>& arr, const string& key) {
     return result;
 }
 
-// ===========================
+
 // BST
-// ===========================
+
 struct BSTNode {
     string key;
     vector<Flower> values;
@@ -77,8 +77,8 @@ BSTNode* bstInsert(BSTNode* root, const string& key, const Flower& val) {
 }
 
 /**
- * @brief Поиск в BST
- * @complexity O(log n) avg, O(n) worst
+ *  Поиск в BST
+ *  O(log n) avg, O(n) worst
  */
 vector<Flower> bstSearch(BSTNode* root, const string& key) {
     if (!root) return {};
@@ -94,9 +94,9 @@ void bstFree(BSTNode* root) {
     delete root;
 }
 
-// ===========================
+
 // RBT
-// ===========================
+
 enum Color { RED, BLACK };
 
 struct RBNode {
@@ -187,8 +187,8 @@ public:
     ~RBTree() { freeNode(root); delete nil; }
 
     /**
-     * @brief Вставка в RBT
-     * @complexity O(log n)
+     *  Вставка в RBT
+     *  O(log n)
      */
     void insert(const string& key, const Flower& val) {
         RBNode* cur = root;
@@ -209,8 +209,8 @@ public:
     }
 
     /**
-     * @brief Поиск в RBT
-     * @complexity O(log n)
+     *  Поиск в RBT
+     *  O(log n)
      */
     vector<Flower> search(const string& key) const {
         RBNode* cur = root;
@@ -222,11 +222,11 @@ public:
     }
 };
 
-// ===========================
+
 // Хеш-таблица
-// ===========================
+
 /**
- * @brief Хеш-таблица с разрешением коллизий цепочками
+ *  Хеш-таблица с разрешением коллизий цепочками
  */
 class HashTable {
     int capacity;
@@ -237,7 +237,7 @@ public:
     HashTable(int cap) : capacity(cap), table(cap) {}
 
     /**
-     * @brief Хеш-функция djb2
+     *  Хеш-функция djb2
      */
     int hashFunc(const string& key) const {
         unsigned long h = 5381;//генерируем индекс для ящика
@@ -252,8 +252,8 @@ public:
     }
 
     /**
-     * @brief Поиск по ключу
-     * @complexity O(1) avg, O(n) worst
+     *  Поиск по ключу
+     *  O(1) avg, O(n) worst
      */
     vector<Flower> search(const string& key) const {
         int idx = hashFunc(key);
